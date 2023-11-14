@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles/home.css">  
+  <title>Home Page</title>
+</head>
+<body>
+  <header>
+    <img src="Images/logo.png" alt="Логотип" class="logo">
+    <div class="city-select">
+      <select name="city">
+        <option value="Kyiv">Київ</option>
+        <option value="Lviv">Львів</option>
+        <option value="Odesa">Одеса</option>
+        <option value="Dnipro">Дніпро</option>
+        <option value="Kharkiv">Харків</option>
+      </select>
+    </div>
+    <nav class="navigation-menu">
+        <a href="#">Донорство</a>
+        <a href="#">Вакцинація</a>
+        <a href="#reviews">Відгуки</a>
+        <a href="#appointment">Запис на прийом</a>
+        <a href="#">Про EasyMed</a>      
+    </nav>
+    <button type="button" class="sign-up">Sign Up</button>
+    <i class="fa-solid fa-user"></i>
+  </header>
+  <hr>
+  <main>
+    <section id="appointment">
+      <h2>Запис на прийом</h2>
+      <p class="descr-appointment">Твій шанс змінити своє життя на краще.<br>Обирай лікаря чи клініку і записуйся на прийом!</p>
+      <div class="search-appointment">
+        <div class="type-search-select">
+            <select name="Type">
+              <option value="doctor">Лікар</option>
+              <option value="clinic">Клініка</option>
+            </select>
+        </div>
+        <input type="text" class="doctor" name="Лікар/Спеціальність">
+        <button type="button" class="search">Search</button>
+      </div>
+    </section>
+    <hr>
+    <section id="services">
+      <h2>Вибір послуг</h2>
+      <div class="slider-services">
+        <i class="fa-solid fa-chevron-left"></i>
+        <div class="services-list">
+            <div class="online-appointment"> 
+                <i class="fa-regular fa-circle"></i>
+                <a href="#">Онлайн прийом</a>
+            </div>
+            <div class="vaccination">
+                <i class="fa-regular fa-circle"></i>
+                <a href="#">Вакцинація</a>
+            </div>
+            <div class="profile">
+                <i class="fa-regular fa-circle"></i>
+                <a href="profile.html">Особистий кабінет</a>                
+            </div>
+            <div class="donation">
+                <i class="fa-regular fa-circle"></i>
+                <a href="#">Донорство</a>
+            </div>
+            <div class="family-doctor">
+                <i class="fa-regular fa-circle"></i>
+                <a href="#">Сімейний лікар</a>
+            </div>
+            <div class="medicine">
+                <i class="fa-regular fa-circle"></i>
+                <a href="#">Ліки</a>
+            </div>
+        </div>
+        <i class="fa-solid fa-chevron-right"></i>
+      </div>
+    </section>
+    <section id="appointment-description">
+      <h2>Як записатися до лікаря?</h2>
+      <div class="steps">
+        <div class="step1">
+            <img src="Images/step1_home.jpg" style="height: 227px; width: 404px;" alt="step1">
+            <p>1. Знайдіть лікаря або клініку</p>
+        </div>
+        <div class="step2">
+            <img src="Images/step2_home.jpg" style="height: 238px; width: 453px;" alt="step2">
+            <p>2. Оберіть зручний для вас час</p>
+        </div>
+        <div class="step3">
+            <img src="Images/step3_home.jpg" style="height: 241px; width: 363px;" alt="step3">
+            <p>3. Прийдіть на прийом до лікаря</p>
+        </div>
+      </div>
+    </section>
+    <hr>
+    <section id="reviews">
+      <h2>Відгуки</h2>
+      <div class="reviews-list">
+            <div class="first-review">
+                <i class="fa-solid fa-image-portrait"></i>
+                <span class="name-reviewer">Lorem ipsum dolor sit</span>
+                <p>Lorem ipsum dolor sit amet, consectetur<br>adipiscing elit. Quisque molestie vel erat id<br>interdum. Etiam aliquam semper convallis.</p>
+            </div>
+            <div class="second-review">
+                <i class="fa-solid fa-image-portrait"></i>
+                <span class="name-reviewer">Lorem ipsum dolor sit</span>
+                <p>Lorem ipsum dolor sit amet, consectetur<br>adipiscing elit. Quisque molestie vel erat id<br>interdum. Etiam aliquam semper convallis.</p>
+            </div>
+            <div class="third-review">
+                <i class="fa-solid fa-image-portrait"></i>
+                <span class="name-reviewer">Lorem ipsum dolor sit</span>
+                <p>Lorem ipsum dolor sit amet, consectetur<br>adipiscing elit. Quisque molestie vel erat id<br>interdum. Etiam aliquam semper convallis.</p>
+            </div>            
+      </div>
+    </section>
+  </main>
+  <footer>    
+    <img src="Images/logo.png" alt="Логотип" class="logo-footer">
+    <hr class="hr-footer">
+    <p class="privacy">© 2020 — 2028 Privacy — Terms</p>
+  </footer>
+</body>
+</html>
