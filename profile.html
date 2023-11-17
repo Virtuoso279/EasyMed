@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles/profile.css">
+  <title>Profile</title>
+</head>
+<body>
+  <header>
+    <img src="Images/logo.png" alt="Логотип" class="logo">
+    <div class="city-select">
+      <select name="City">
+        <option value="Kyiv">Київ</option>
+        <option value="Lviv">Львів</option>
+        <option value="Odesa">Одеса</option>
+        <option value="Dnipro">Дніпро</option>
+        <option value="Kharkiv">Харків</option>
+      </select>
+    </div>     
+    <i class="fa-solid fa-user"></i>
+    <i class="fa-solid fa-gear"></i> 
+  </header>
+  <hr>
+  <main>
+    <section id="personal-data">
+      <img src="Images/user_photo.png" style="height: 277px; width: 527px;" alt="user-photo">
+      <h2>Особисті дані</h2>
+      <div class="declaration-info">
+        <span class="id-user">№589-VDSV-00485</span>      
+        <button type="button" class="confirm-declaration" onclick="confirmFunc()">Підтвердити декларацію</button>
+      </div>
+      <hr>
+      <div class="user-data-fields">
+        <div class="user-field">
+            <i class="fa-solid fa-user-pen"></i>
+            <span id="user-name">Lorem ipsum dolor sit amet,</span>
+        </div>
+        <div class="user-field">
+            <i class="fa-solid fa-phone"></i>
+            <span id="user-phone">Lorem ipsum dolor sit amet,</span>
+        </div>
+        <div class="user-field">
+            <i class="fa-solid fa-envelope"></i>
+            <span id="user-email">Lorem ipsum dolor sit amet,</span>
+        </div>
+        <div class="user-field">
+            <i class="fa-solid fa-calendar-days"></i>
+            <span id="user-birth">Lorem ipsum dolor sit amet,</span>
+        </div>
+        <div class="user-field">
+            <i class="fa-solid fa-location-dot"></i>
+            <span id="user-location">Lorem ipsum dolor sit amet,</span>
+        </div>
+      </div>
+      <button class="edit">Редагувати</button>
+    </section>
+    <section id="services">
+      <h2>Послуги</h2>
+      <div class="services-list">
+        <div class="service-info">
+            <i class="fa-regular fa-calendar-check"></i>
+            <span>Запис на прийом</span>
+            <button type="button" id="choose-appointment">Обрати</button>
+        </div>
+        <div class="service-info">
+            <i class="fa-solid fa-user-doctor"></i>
+            <span>Сімейний лікар</span>
+            <button type="button" id="choose-family-doctor">Обрати</button>
+        </div>
+        <div class="service-info">
+            <i class="fa-solid fa-id-card"></i>
+            <span>Медична картка</span>
+            <button type="button" id="choose-medical-card">Обрати</button>
+        </div>
+        <div class="service-info">
+            <i class="fa-solid fa-heart-pulse"></i>
+            <span>Донорство крові</span>
+            <button type="button" id="choose-donation">Обрати</button>
+        </div>
+        <div class="service-info">
+            <i class="fa-solid fa-briefcase-medical"></i>
+            <span>Медичні документи</span>
+            <button type="button" id="choose-medical-documents">Обрати</button>
+        </div>
+      </div>
+    </section>    
+    <section id="additionally">
+      <h2>Додатково</h2>
+      <div class="additionally-list">
+        <div class="vaccination">
+            <hr class="add-hr">
+            <div class="add-info">
+              <span>Вакцинація</span>
+              <a href="#">
+                  <i class="fa-solid fa-chevron-right"></i>
+              </a>
+            </div>
+        </div>
+        <div class="medicine">
+            <hr class="add-hr">
+            <div class="add-info">
+              <span>Купівля ліків</span>
+              <a href="#">
+                  <i class="fa-solid fa-chevron-right"></i>
+              </a>
+            </div>
+        </div>
+        <div class="questions">
+            <hr class="add-hr">
+            <div class="add-info">
+              <span>Питання відповіді</span>
+              <a href="#">
+                  <i class="fa-solid fa-chevron-right"></i>
+              </a>
+            </div>
+        </div>
+        <div class="support">
+            <hr class="add-hr">
+            <div class="add-info">
+              <span>Служба підтримки</span>
+              <a href="#">
+                  <i class="fa-solid fa-chevron-right"></i>
+              </a>
+            </div>
+        </div>
+        <div class="none">
+            <hr class="add-hr">
+            <div class="add-info">
+              <span>Lorem ipsum dolor sit amet,</span>
+              <a href="#">
+                  <i class="fa-solid fa-chevron-right"></i>
+              </a>
+            </div>
+            <hr class="add-hr">
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>    
+    <img src="Images/logo.png" alt="Логотип" class="logo">
+    <hr>
+    <p>© 2020 — 2028 Privacy — Terms</p>
+  </footer>
+
+  <script>    
+    // підтверджена декларація
+    function confirmFunc() {
+      document.querySelector('.id-user').style.color = "lightgreen";
+    }
+    
+    //перейти в медичну картку
+    const cardButton = document.getElementById('choose-medical-card');
+
+    cardButton.addEventListener('click', function(){
+      window.location.href = 'medical_card.html';
+    });
+
+    //заміна даних
+    const editButton = document.querySelector('.edit');
+
+    editButton.addEventListener('click', function() {
+      var selectValue = prompt('Оберіть характеристику від 1 до 5: ');
+      const regex = /^[1-5]$/;
+
+      if (regex.test(selectValue)) {
+        console.log(selectValue);  
+
+        switch(selectValue) {
+          case '1': 
+          var name = prompt('Введіть своє ПІБ: ');
+          document.getElementById('user-name').innerHTML = name;
+          break;
+          case '2': 
+          var phone = prompt('Введіть свій номер телефону: ');
+          document.getElementById('user-phone').innerHTML = phone;
+          break;
+          case '3': 
+          var email = prompt('Введіть свій email: ');
+          document.getElementById('user-email').innerHTML = email;
+          break;
+          case '4': 
+          var birth = prompt('Введіть свою дату народження: ');
+          document.getElementById('user-birth').innerHTML = birth;
+          break;
+          case '5': 
+          var location = prompt('Введіть свою адресу: ');
+          document.getElementById('user-location').innerHTML = location;
+          break;
+        }    
+      }
+      else {
+        alert('Ви ввели некоректні дані!');
+      }
+    });
+
+  </script>
+</body>
+</html>
