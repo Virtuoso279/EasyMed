@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto&display=swap');
+
+body {
+    background-color: white;
+
+    font: normal 20px 'Roboto', sans-serif;   
+    text-align: center;
+}
+
+h2 {
+    font-size: 24px;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+select {
+    border: 1px solid #888282; 
+    border-radius: 5px;
+    padding: 8px 24px;    
+    cursor: pointer;
+    font-size: 20px;
+}
+
+button:hover {
+    background-color: #888282;
+}
+
+button {
+    font-size: 20px;
+}
+
+/* header */
+
+header {
+    display: flex;
+    align-items: center;
+    margin: 25px 28px 27px 25px;
+}
+
+.navigation-menu {
+    display: flex;
+    align-items: center;
+    gap: 32px ;
+    margin: 0 199px 0 0;
+}
+
+.city-select select {
+    margin: 9px 205px 7px 23px;  
+}
+
+.sign-up {
+    margin: 0 25px;
+    padding: 8px 36px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.fa-solid.fa-user {
+    font-size: 40px;
+}
+
+/* body */
+
+/* Запис на прийом */
+#appointment {
+    margin: 86px 0 86px 0;
+}
+
+.descr-appointment {
+    margin: 49px 0 49px 0;
+}
+
+.search-appointment {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.input-doctor {
+    padding: 10px 36px;
+    border: 1px solid #888282;
+    border-radius: 5px;
+}
+
+input:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.search {
+    padding: 10px 36px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Вибір послуг */
+#services {
+    margin: 86px 0 128px 0;
+}
+
+.slider-services {
+    margin: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+}
+
+.services-list {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+}
+
+.fa-regular.fa-circle {
+    display: block;    
+    font-size: 60px;
+    margin-bottom: 17px;
+}
+
+/* Як записатися до лікаря? */
+#appointment-description {
+    margin: 0 0 108px 0;
+}
+
+.steps {
+    margin: 83px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 105px;
+}
+
+/* Відгуки */
+#reviews {
+    margin: 86px 0 86px 0;
+}
+
+.reviews-list {
+    margin: 59px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 109px;
+}
+
+.name-reviewer {
+    margin: 0 0 0 49px;
+}
+
+.fa-solid.fa-image-portrait {
+    font-size: 70px;
+}
+
+/* footer */
+footer {
+    text-align: center;
+    margin-top: 107px;
+}
+
+.hr-footer {
+    margin: 45px 113px 45px;
+    width: 80%;
+}
+
+.privacy {
+    font-size: 14px;
+}
